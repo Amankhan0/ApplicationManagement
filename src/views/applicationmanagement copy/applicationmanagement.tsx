@@ -10,7 +10,7 @@ import CustomSelect from "../../components/ui/forms/CustomSelect";
 import { AddApplicationSideBar, addBodyData, clientPanel, ComponentArray, searchApplicationSidebar, sidebarCompoentnepermissions, superAdminPanel } from "../../constants/constants";
 import ApplicationManagementSideBar from "./applicationmanagementsidebar";
 import ApplicationManagementBody from "./applicationmanagementbody";
-import { BodyDataApiResponse, BodyDataItem, PanelDataItem, PanelTypes, setActiveScreenIndex, setApplicationManagementType, setBodyData, setBodyModal, setPanelData, setSidebarData, setSidebarModal, SideBarApiResponse, sidebarItem } from "../../features/applicationSlice";
+import { BodyDataApiResponse, BodyDataItem, PanelDataItem, PanelTypes, setActiveScreenIndex, setApplicationManagementType, setBodyData, setBodyModal, setPanelData, setSidebarData, setSidebarModal, SideBarApiResponse, sidebarItem } from "../../features/applicationmanagement";
 import { ApiHit } from "../../constants/Apihit";
 import toast from "react-hot-toast";
 

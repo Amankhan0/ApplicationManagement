@@ -1,5 +1,5 @@
 
-export const Base = 'http://192.168.1.5:8080/'
+export const Base = 'http://192.168.1.20:8080/'
 
 const applicationManagement = 'applicationManagement/'
 

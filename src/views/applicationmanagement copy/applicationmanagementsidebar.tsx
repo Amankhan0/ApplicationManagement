@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "store";
 import { plusIcon, saveIcon, threeDotsIcon, trashBinIcon } from "../../components/icons/icons";
-import { setActiveScreenIndex, setBodyData, setSidebarModal, setSidebarData, sidebarItem } from "../../features/applicationSlice";
+import { setActiveScreenIndex, setBodyData, setSidebarModal, setSidebarData, sidebarItem } from "../../features/applicationmanagement";
 import { ApiHit } from "../../constants/Apihit";
 import { deleteApplicationSidebar, searchApplicationSidebar, updateApplicationSidebar } from "../../constants/constants";
 import { ObjIsEmpty } from "../../utils/utils";
@@ -14,7 +14,7 @@ import toast from "react-hot-toast";
 
 const ApplicationManagementSideBar = () => {
 
-    const ApplicationManagementReducer = useSelector((state: RootState) => state.application);
+    const ApplicationManagementReducer = useSelector((state: RootState) => state.ApplicationManagementReducer);
     const ApiReducer = useSelector((state: RootState) => state.ApiReducer);
 
     const dispatch = useDispatch()

@@ -3,7 +3,7 @@ import CustomButton from "../../components/ui/forms/CustomButton";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "store";
 import { plusIcon, trashBinIcon } from "../../components/icons/icons";
-import { BodyDataApiResponse, BodyDataItem, PanelTypes, setBodyData, setBodyModal, setPanelData } from "../../features/applicationSlice";
+import { BodyDataApiResponse, BodyDataItem, PanelTypes, setBodyData, setBodyModal, setPanelData } from "../../features/applicationmanagement";
 import CustomSwitch from "../../components/ui/forms/CustomSwitch";
 import { Active, deleteBodyData, InActive, searchBodyData, updateBodyData } from "../../constants/constants";
 import { ApiHit } from "../../constants/Apihit";
@@ -12,7 +12,7 @@ import toast from "react-hot-toast";
 
 const ApplicationManagementBody = () => {
 
-    const ApplicationManagementReducer = useSelector((state: RootState) => state.application);
+    const ApplicationManagementReducer = useSelector((state: RootState) => state.ApplicationManagementReducer);
     const dispatch = useDispatch()
 
     useEffect(() => {

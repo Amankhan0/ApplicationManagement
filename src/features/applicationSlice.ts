@@ -84,7 +84,7 @@ const initialState: FullRedux = {
 };
 
 // Redux slice definition
-const ApplicationManagement = createSlice({
+const ApplicationManagement = createSlice({ 
   name: 'ApplicationManagement',
   initialState,
   reducers: {

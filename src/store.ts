@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import apireducer from './features/apireducer';
-import ApplicationManagement from './features/applicationmanagement';
+import applicationSlice from './features/applicationSlice';
 
 export const store = configureStore({
     reducer: {
-        ApplicationManagementReducer: ApplicationManagement,
+        application: applicationSlice,
         ApiReducer:apireducer,
     },
 });

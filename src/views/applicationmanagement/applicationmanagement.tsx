@@ -23,14 +23,8 @@ const ApplicationManagement = () => {
     const [loader, setLoader] = useState(false)
 
     useEffect(() => {
-
-        console.log('ApplicationManagementReducer', ApplicationManagementReducer);
-        
-
         if (ApplicationManagementReducer?.sidebarData?.data?.length === 0) {
             fetchSideBarData()
-            // console.log('call --- ');
-
         }
     }, [])
 
@@ -41,12 +35,11 @@ const ApplicationManagement = () => {
         }
         ApiHit(json, searchApplicationSidebar)
             .then((result) => {
-                // Extract data from the response
-                const sidebarItems = result as SideBarApiResponse; // Type assertion for 'data'
-                dispatch(setSidebarData(sidebarItems)); // Dispatch the sidebarItems
+                const sidebarItems = result as SideBarApiResponse;
+                dispatch(setSidebarData(sidebarItems));
             })
             .catch((error) => {
-                console.error("API hit failed", error); // Handle errors
+                console.error("API hit failed", error);
             });
     }
 
@@ -95,8 +88,6 @@ const ApplicationManagement = () => {
             })
         }
     }
-
-    console.log(ApiReducer);
 
     const onChangeType = (type:string) =>{
         dispatch(setApplicationManagementType(type))

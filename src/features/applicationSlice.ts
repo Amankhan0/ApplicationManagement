@@ -8,6 +8,8 @@ export interface permissions {
   delete: boolean;
 }
 
+
+
 // Define the structure of BodyDataItem
 export interface BodyDataItem {
   componentName: string;

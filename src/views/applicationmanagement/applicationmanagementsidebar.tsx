@@ -2,21 +2,21 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "store";
 import { editSmallTrashBinIcon, plusIcon, saveIcon, smalltrashBinIcon } from "../../components/icons/icons";
-import { setActiveScreenIndex, setBodyData, setSidebarModal, setSidebarData, sidebarItem } from "../../features/applicationSlice";
+import { setActiveScreenIndex, setBodyData, setSidebarModal, setSidebarData, sidebarItem } from "../../features/ApplicationSlice";
 import { ApiHit } from "../../constants/Apihit";
 import { Active, deleteApplicationSidebar, InActive, searchApplicationSidebar, updateApplicationSidebar } from "../../constants/constants";
 import { ObjIsEmpty } from "../../utils/utils";
 import CustomModal from "../../components/ui/modal/modal";
 import CustomButton from "../../components/ui/forms/CustomButton";
 import CustomInput from "../../components/ui/forms/CustomInput";
-import { setApiJson, setApiJsonError } from "../../features/apireducer";
+import { setApiJson, setApiJsonError } from "../../features/ApplicationApiSlice";
 import toast from "react-hot-toast";
 import CustomSwitch from "../../components/ui/forms/CustomSwitch";
 
 const ApplicationManagementSideBar = () => {
 
-    const ApplicationManagementReducer = useSelector((state: RootState) => state.application);
-    const ApiReducer = useSelector((state: RootState) => state.ApiReducer);
+    const ApplicationManagementReducer = useSelector((state: RootState) => state.ApplicationSlice);
+    const ApiReducer = useSelector((state: RootState) => state.ApplicationApiSlice);
 
     const dispatch = useDispatch()
 
@@ -131,7 +131,7 @@ const ApplicationManagementSideBar = () => {
     }
 
     return (
-        <div className={`w-[20%] shadow-lg bg-lightGray rounded-lg`} style={{ height: height / 1.25 }}>
+        <div className={`w-[30%] shadow-lg bg-lightGray rounded-lg`} style={{ height: height / 1.25 }}>
             <div className="flex justify-between text-sm p-3 border-b border-b-darkGray items-center">
                 <p className="font-bold">List of Features</p>
                 <i onClick={() => onClick()} className="text-sm cursor-pointer hover:text-white hover:bg-primary hover:w-5 hover:h-5 hover:rounded-full">{plusIcon}</i>

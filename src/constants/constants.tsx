@@ -1,7 +1,7 @@
 
-export const Base = 'http://192.168.1.20:8080/'
+export const Base = 'http://192.168.1.46:8080/'
 
-const applicationManagement = 'applicationManagement/'
+export const applicationManagement = 'applicationManagement/'
 
 export const AddApplicationSideBar = Base + applicationManagement+ 'addApplicationSidebar'
 export const searchApplicationSidebar = Base + applicationManagement+ 'searchApplicationSidebar'

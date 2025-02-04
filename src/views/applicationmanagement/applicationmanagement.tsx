@@ -5,19 +5,19 @@ import CustomModal from "../../components/ui/modal/modal";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "store";
 import { plusIcon, userIcon, usersIcon } from "../../components/icons/icons";
-import { setApiJsonError } from "../../features/apireducer";
+import { setApiJsonError } from "../../features/ApplicationApiSlice";
 import CustomSelect from "../../components/ui/forms/CustomSelect";
 import { AddApplicationSideBar, addBodyData, clientPanel, ComponentArray, searchApplicationSidebar, sidebarCompoentnepermissions, superAdminPanel } from "../../constants/constants";
 import ApplicationManagementSideBar from "./applicationmanagementsidebar";
 import ApplicationManagementBody from "./applicationmanagementbody";
-import { BodyDataApiResponse, BodyDataItem, PanelDataItem, PanelTypes, setActiveScreenIndex, setApplicationManagementType, setBodyData, setBodyModal, setPanelData, setSidebarData, setSidebarModal, SideBarApiResponse, sidebarItem } from "../../features/applicationSlice";
+import { BodyDataApiResponse, BodyDataItem, PanelDataItem, PanelTypes, setActiveScreenIndex, setApplicationManagementType, setBodyData, setBodyModal, setPanelData, setSidebarData, setSidebarModal, SideBarApiResponse, sidebarItem } from "../../features/ApplicationSlice";
 import { ApiHit } from "../../constants/Apihit";
 import toast from "react-hot-toast";
 
 const ApplicationManagement = () => {
 
-    const ApiReducer = useSelector((state: RootState) => state.ApiReducer);
-    const ApplicationManagementReducer = useSelector((state: RootState) => state.application);
+    const ApiReducer = useSelector((state: RootState) => state.ApplicationApiSlice);
+    const ApplicationManagementReducer = useSelector((state: RootState) => state.ApplicationSlice);
     const dispatch = useDispatch()
 
     const [loader, setLoader] = useState(false)

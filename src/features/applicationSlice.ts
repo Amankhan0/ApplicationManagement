@@ -8,8 +8,6 @@ export interface permissions {
   delete: boolean;
 }
 
-
-
 // Define the structure of BodyDataItem
 export interface BodyDataItem {
   componentName: string;
@@ -86,8 +84,8 @@ const initialState: FullRedux = {
 };
 
 // Redux slice definition
-const ApplicationManagement = createSlice({ 
-  name: 'ApplicationManagement',
+const ApplicationSlice = createSlice({ 
+  name: 'ApplicationSlice',
   initialState,
   reducers: {
     setSidebarData: (state, action: PayloadAction<SideBarApiResponse>) => {
@@ -132,6 +130,6 @@ export const {
   setApplicationManagementType,
   setSidebarData,
   setBodyData,
-} = ApplicationManagement.actions;
+} = ApplicationSlice.actions;
 
-export default ApplicationManagement.reducer;
+export default ApplicationSlice.reducer;

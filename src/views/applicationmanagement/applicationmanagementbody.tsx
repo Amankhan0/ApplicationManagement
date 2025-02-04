@@ -3,7 +3,7 @@ import CustomButton from "../../components/ui/forms/CustomButton";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "store";
 import { plusIcon, trashBinIcon } from "../../components/icons/icons";
-import { BodyDataApiResponse, BodyDataItem, PanelTypes, setBodyData, setBodyModal, setPanelData } from "../../features/applicationSlice";
+import { BodyDataApiResponse, BodyDataItem, PanelTypes, setBodyData, setBodyModal, setPanelData } from "../../features/ApplicationSlice";
 import CustomSwitch from "../../components/ui/forms/CustomSwitch";
 import { Active, deleteBodyData, InActive, searchBodyData, updateBodyData } from "../../constants/constants";
 import { ApiHit } from "../../constants/Apihit";
@@ -12,7 +12,7 @@ import toast from "react-hot-toast";
 
 const ApplicationManagementBody = () => {
 
-    const ApplicationManagementReducer = useSelector((state: RootState) => state.application);
+    const ApplicationManagementReducer = useSelector((state: RootState) => state.ApplicationSlice);
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -73,7 +73,7 @@ const ApplicationManagementBody = () => {
     };
 
     return (
-        <div className="w-[80%] bg-lightGray rounded-lg ml-5 p-5 shadow-lg">
+        <div className="w-[70%] bg-lightGray rounded-lg ml-5 p-5 shadow-lg">
             {
                 ApplicationManagementReducer?.activeScreenIndex !== 0 &&
                 <CustomButton onClick={() => onClickBodyComponents()} icon={plusIcon} title="Add Components" />

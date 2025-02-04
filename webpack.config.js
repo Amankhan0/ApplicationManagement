@@ -61,8 +61,9 @@ module.exports = {
       exposes: {
         "./store": "./src/store",
         "./applicationmanagement": "./src/App",
-        "./sampleSlice123": "./src/features/sample/sampleSlice",
-        "./applicationSlice": "./src/features/applicationSlice",
+        "./ApplicationSlice": "./src/features/ApplicationSlice",
+        "./ApplicationApiSlice": "./src/features/ApplicationApiSlice",
+       
       },
       shared: {
         react: { singleton: true, requiredVersion: "18", eager: true },

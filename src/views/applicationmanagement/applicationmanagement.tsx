@@ -7,7 +7,7 @@ import { RootState } from "store";
 import { plusIcon, userIcon, usersIcon } from "../../components/icons/icons";
 import { setApiJsonError } from "../../features/ApplicationApiSlice";
 import CustomSelect from "../../components/ui/forms/CustomSelect";
-import { AddApplicationSideBar, addBodyData, clientPanel, ComponentArray, searchApplicationSidebar, sidebarCompoentnepermissions, superAdminPanel } from "../../constants/constants";
+import { AddApplicationSideBar, addBodyData, clientPanel, ComponentArray, InActive, searchApplicationSidebar, sidebarCompoentnepermissions, superAdminPanel } from "../../constants/constants";
 import ApplicationManagementSideBar from "./applicationmanagementsidebar";
 import ApplicationManagementBody from "./applicationmanagementbody";
 import { BodyDataApiResponse, BodyDataItem, PanelDataItem, PanelTypes, setActiveScreenIndex, setApplicationManagementType, setBodyData, setBodyModal, setPanelData, setSidebarData, setSidebarModal, SideBarApiResponse, sidebarItem } from "../../features/ApplicationSlice";
@@ -49,7 +49,7 @@ const ApplicationManagement = () => {
         } else {
             var json = {
                 screenName: ApiReducer?.apiJson?.screenName + "",
-                status: "Active",
+                status: InActive,
                 type: ApplicationManagementReducer?.type + "",
             }
             setLoader(true)
